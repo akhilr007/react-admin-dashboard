@@ -8,7 +8,7 @@ import Topbar from "./scenes/global/Topbar.jsx";
 import Team from "./scenes/team/";
 import Invoice from "./scenes/invoices";
 import Contacts from "./scenes/contacts";
-// import Bar from "./scenes/bar";
+import Bar from "./scenes/bar";
 import Form from "./scenes/form";
 // import Line from "./scenes/line";
 // import Pie from "./scenes/pie";
@@ -48,6 +48,10 @@ const routes = createBrowserRouter([
       {
         path: "faq",
         element: <FAQ />,
+      },
+      {
+        path: "bar",
+        element: <Bar />,
       },
     ],
   },
