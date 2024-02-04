@@ -12,7 +12,7 @@ import Contacts from "./scenes/contacts";
 import Form from "./scenes/form";
 // import Line from "./scenes/line";
 // import Pie from "./scenes/pie";
-// import FAQ from "./scenes/faq";
+import FAQ from "./scenes/faq";
 // import Geography from "./scenes/geography";
 import Calendar from "./scenes/calendar";
 
@@ -44,6 +44,10 @@ const routes = createBrowserRouter([
       {
         path: "calendar",
         element: <Calendar />,
+      },
+      {
+        path: "faq",
+        element: <FAQ />,
       },
     ],
   },
