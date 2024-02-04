@@ -6,7 +6,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Dashboard from "./scenes/dashboard";
 import Topbar from "./scenes/global/Topbar.jsx";
 import Team from "./scenes/team/";
-// import Invoices from "./scenes/invoices";
+import Invoice from "./scenes/invoices";
 import Contacts from "./scenes/contacts";
 // import Bar from "./scenes/bar";
 // import Form from "./scenes/form";
@@ -32,6 +32,10 @@ const routes = createBrowserRouter([
       {
         path: "contacts",
         element: <Contacts />,
+      },
+      {
+        path: "invoices",
+        element: <Invoice />,
       },
     ],
   },
