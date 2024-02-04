@@ -9,7 +9,7 @@ import Team from "./scenes/team/";
 import Invoice from "./scenes/invoices";
 import Contacts from "./scenes/contacts";
 // import Bar from "./scenes/bar";
-// import Form from "./scenes/form";
+import Form from "./scenes/form";
 // import Line from "./scenes/line";
 // import Pie from "./scenes/pie";
 // import FAQ from "./scenes/faq";
@@ -36,6 +36,10 @@ const routes = createBrowserRouter([
       {
         path: "invoices",
         element: <Invoice />,
+      },
+      {
+        path: "form",
+        element: <Form />,
       },
     ],
   },
