@@ -1,7 +1,8 @@
 import { ResponsivePie } from "@nivo/pie";
 import { tokens } from "../theme";
-import { useTheme } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import { mockPieData as data } from "../data/mockData";
+import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 
 const PieChart = () => {
   const theme = useTheme();
@@ -10,6 +11,35 @@ const PieChart = () => {
   return (
     <ResponsivePie
       data={data}
+      tooltip={({ datum }) => {
+        return (
+          <Box
+            p="6px 10px"
+            display="flex"
+            justifyContent="space-between"
+            backgroundColor="#fff"
+            alignContent="center"
+          >
+            <Box borderRadius="20px">
+              <CheckBoxOutlineBlankIcon
+                fontSize="small"
+                sx={{
+                  backgroundColor: `${datum.color}`,
+                  color: `${datum.color}`,
+                }}
+              />
+            </Box>
+            <Typography
+              sx={{
+                color: colors.grey[900],
+                pl: "5px",
+              }}
+            >
+              {datum.data.label} - {datum.data.value}
+            </Typography>
+          </Box>
+        );
+      }}
       theme={{
         axis: {
           domain: {
@@ -146,7 +176,7 @@ const PieChart = () => {
             {
               on: "hover",
               style: {
-                itemTextColor: "#000",
+                itemTextColor: "#fff",
               },
             },
           ],
