@@ -10,10 +10,10 @@ import Invoice from "./scenes/invoices";
 import Contacts from "./scenes/contacts";
 import Bar from "./scenes/bar";
 import Form from "./scenes/form";
-// import Line from "./scenes/line";
+import Line from "./scenes/line";
 import Pie from "./scenes/pie";
 import FAQ from "./scenes/faq";
-// import Geography from "./scenes/geography";
+import Geography from "./scenes/geography";
 import Calendar from "./scenes/calendar";
 
 const routes = createBrowserRouter([
@@ -56,6 +56,14 @@ const routes = createBrowserRouter([
       {
         path: "pie",
         element: <Pie />,
+      },
+      {
+        path: "line",
+        element: <Line />,
+      },
+      {
+        path: "geography",
+        element: <Geography />,
       },
     ],
   },
